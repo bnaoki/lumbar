@@ -1,0 +1,14 @@
+{
+  "name": "lumbar",
+  "description": "FILL_ME_IN",
+  "version": "0.0.1",
+  "license": "MIT",
+  "contributors": [
+    "Bobby Mathews <bnaoki12@gmail.com>",
+    "Allen Chen <allenpc@gmail.com>" 
+  ],
+  "dependencies": {
+    "backbone": "1.1.2",
+    "underscore": "1.6.0"
+  }
+}
