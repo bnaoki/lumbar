@@ -43,7 +43,7 @@ var Model = Backbone.Model.extend({
   //
   //     model.set('attr1.attr2', value);
   //
-  // But the following wouldn't and would result in value getting set on model as `attr1.attr2`:
+  // But the following wouldn't and would result in value getting set on model as `attr1.attr2` :
   //
   //     model.set({ 'attr1.attr2': value });
   //
