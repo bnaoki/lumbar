@@ -1,6 +1,6 @@
 {
   "name": "lumbar",
-  "description": "FILL_ME_IN",
+  "description": "Backbone.js extension",
   "version": "0.0.1",
   "license": "MIT",
   "contributors": [
@@ -10,5 +10,9 @@
   "dependencies": {
     "backbone": "1.1.2",
     "underscore": "1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bnaoki/lumbar.git"
   }
 }
