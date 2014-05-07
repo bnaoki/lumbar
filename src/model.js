@@ -82,7 +82,7 @@ var Model = Backbone.Model.extend({
     // Trigger an error event if unable to evaluate nested key
     if (!result) {
       var error = 'Unable to do nested set for invalid key: ' + key;
-      this.trigger('lumbar:invalid:set', this, error, _.extend(options, { setError: error });
+      this.trigger('lumbar:invalid:set', this, error, _.extend(options, { setError: error }));
       return false;
     }
 

@@ -1,8 +1,6 @@
 {
   "name": "lumbar",
   "description": "Backbone.js extension",
-  "version": "0.0.1",
-  "license": "MIT",
   "contributors": [
     "Bobby Mathews <bnaoki12@gmail.com>",
     "Allen Chen <allenpc@gmail.com>" 
@@ -11,8 +9,8 @@
     "backbone": "1.1.2",
     "underscore": "1.6.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bnaoki/lumbar.git"
-  }
+  "main": "src/lumbar.js",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/bnaoki/lumbar.git" }
 }
