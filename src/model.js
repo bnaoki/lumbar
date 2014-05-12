@@ -66,7 +66,7 @@ var Model = Backbone.Model.extend({
       var isLast = (i === fields.length - 1);
       if (result instanceof Backbone.Model) {
         if (isLast) {
-          BaseModel.__super__.set.call(result, fields[i], val, options);
+          Model.__super__.set.call(result, fields[i], val, options);
         } else {
           result = result.get(fields[i]);
         }
