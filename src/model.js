@@ -102,11 +102,11 @@ var Model = Backbone.Model.extend({
 
   // Extends `Backbone.Model` 's `toJSON` by also further calling toJSON on Model attributes as
   // specified in `modelAttributes`
-  toJSON: function() {
+  toJSON: function(options) {
     var json = Model.__super__.toJSON.apply(this, arguments);
     _.each(this.modelAttributes, function(model, attr) {
       if (this.get(attr)) {
-        json[attr] = this.get(attr).toJSON();
+        json[attr] = this.get(attr).toJSON(options);
       }
     }, this);
     return json;
