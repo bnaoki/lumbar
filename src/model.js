@@ -92,12 +92,13 @@ var Model = Backbone.Model.extend({
   // Overrides `Backbone.Model` 's default `parse` . Expands attributes as Model instances for
   // attributes configured in `modelAttributes` .
   parse: function(resp) {
+    var parsed = _.clone(resp);
     _.each(this.modelAttributes, function(model, attr) {
-      if (resp[attr]) {
-        resp[attr] = new model(resp[attr], { parse: true });
+      if (parsed[attr]) {
+        parsed[attr] = new model(parsed[attr], { parse: true });
       }
     });
-    return resp;
+    return parsed;
   },
 
   // Extends `Backbone.Model` 's `toJSON` by also further calling toJSON on Model attributes as
