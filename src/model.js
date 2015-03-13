@@ -93,9 +93,10 @@ var Model = Backbone.Model.extend({
   // attributes configured in `modelAttributes` .
   parse: function(resp) {
     var parsed = _.clone(resp);
-    _.each(this.modelAttributes, function(model, attr) {
-      if (parsed[attr]) {
-        parsed[attr] = new model(parsed[attr], { parse: true });
+    _.each(this.modelAttributes, function(Model, attrName) {
+      var obj = parsed[attrName];
+      if (obj && !(obj instanceof Model)) {
+        parsed[attrName] = new Model(obj, { parse: true });
       }
     });
     return parsed;
