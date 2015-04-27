@@ -93,7 +93,8 @@ var Model = Backbone.Model.extend({
   // attributes configured in `modelAttributes` .
   parse: function(resp) {
     var parsed = _.clone(resp);
-    _.each(this.modelAttributes, function(Model, attrName) {
+    var modelAttributes = _.result(this, 'modelAttributes');
+    _.each(modelAttributes, function(Model, attrName) {
       var obj = parsed[attrName];
       if (obj && !(obj instanceof Model)) {
         parsed[attrName] = new Model(obj, { parse: true });
@@ -106,7 +107,8 @@ var Model = Backbone.Model.extend({
   // specified in `modelAttributes`
   toJSON: function(options) {
     var json = Model.__super__.toJSON.apply(this, arguments);
-    _.each(this.modelAttributes, function(Model, attrName) {
+    var modelAttributes = _.result(this, 'modelAttributes');
+    _.each(modelAttributes, function(Model, attrName) {
       var obj = this.get(attrName);
       if (obj && obj instanceof Model && _.isFunction(obj.toJSON)) {
         json[attrName] = obj.toJSON(options);
